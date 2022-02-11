@@ -1,0 +1,20 @@
+{% extends 'store/main.html'%}
+{% load static %} 
+{% block content %}
+<a class="btn btn-outline-warning" href="{% url 'store' %}">&#x2190; Continue Shopping</a>
+   <div class="row">
+       <div class="col-lg-6">
+           <img class="view-image" src="{{product.imageURL}}" alt="">
+       </div>
+       <div class="col-lg-4">
+        
+           <p><b><strong>{{product.name}}</strong></b></p>
+           <p>Price: <b>{{product.price}} Taka</b></p>
+            <strong>Product Detail</strong>
+           <p><i>{{product.description}}</i></p>
+       </div>
+   </div>
+   <div class="row">
+    <a href="https://facebook.com" target="_blank" ><span>Facebook</span></a>
+   </div>
+{% endblock content %}
